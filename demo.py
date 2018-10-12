@@ -1,17 +1,14 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Sep 12 17:26:00 2018
+# A script to demonstrate the use of AWS_EC2mail
 
-@author: u0113548
-"""
+import AWS_EC2mail
 
-import send_mail
+# Email details
+SENDER = "xyz@gmail.com" #sender's SES verified email ID
+RECIPIENT = "abc@gmail.com"  #recipient's SES verified email ID
+SUBJECT = "Computations done" # subject of email
+BODY = "Validation accuracy is _" # main body of email
+AWS_REGION = "us-east-1" #US East (N. Virginia), go to https://docs.aws.amazon.com/general/latest/gr/rande.html
+                         # for a list of region code
 
-
-SENDER = "dasnilakash@gmail.com"
-RECIPIENT = "dasnilakash@gmail.com"
-SUBJECT = "Computations done"
-BODY = "Validation accuracy is ___"
-AWS_REGION = "us-east-1" #US East (N. Virginia)
-
-send_mail.send(SENDER,RECIPIENT,SUBJECT,BODY, AWS_REGION )
+# send mail from SENDER to RECIPIENT
+AWS_EC2mail.send(SENDER,RECIPIENT,SUBJECT,BODY, AWS_REGION )
