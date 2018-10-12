@@ -2,7 +2,7 @@
 """
 A wrapper to send mail via Amazon EC2.
 Pre-requisites: 1. EC2 instance with any python 3.6 distribution with bot3 and botocore libraries
-                2. Verified sender and receiver email ids with AES
+                2. Verified sender and receiver email ids with Amazon SES
                 3. Root access keys
                 
 Original source: https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-using-sdk-python.html
